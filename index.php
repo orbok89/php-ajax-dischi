@@ -9,18 +9,18 @@
 </head>
 <body>
     <header>
-    <label for="generi_musicali">Filtra per genere</label>
-    <select v-model="genere"  @change="$emit('filtro', genere)">
-      <option disabled value="">seleziona genere</option>
-      <option >Rock</option>
-      <option>Metal</option>
-      <option>Pop</option>
-      <option>Jazz</option>
-    </select>
+        <label for="generi_musicali">Filtra per genere</label>
+        <select v-model="genere"  @change="$emit('filtro', genere)">
+        <option disabled value="">seleziona genere</option>
+        <option >Rock</option>
+        <option>Metal</option>
+        <option>Pop</option>
+        <option>Jazz</option>
+        </select>
     </header>
     <div class="container">
     <?php 
-        include 'database.php';
+        include 'api/database.php';
         foreach ($db as $disco){
             echo '<div class="locandina">';
             echo '<img class="resize" src="'.$disco['poster']. '" alt="">';
